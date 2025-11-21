@@ -3,7 +3,7 @@ using Tarea_17_11.Models;
 
 namespace Tarea_17_11.Data
 {
-    public class AppDbContext
+    public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
