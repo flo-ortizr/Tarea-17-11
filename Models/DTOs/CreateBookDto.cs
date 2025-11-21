@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Tarea_17_11.DTOs
+namespace Tarea_17_11.Models.DTOs
 {
     public record CreateBookDto
     {
