@@ -25,9 +25,11 @@ namespace Tarea_17_11.Services
             return book;
         }
 
-        public Task DeleteBook(Guid id)
+        public async Task DeleteBook(Guid id)
         {
-            throw new NotImplementedException();
+            Book? book = (await GetAll()).FirstOrDefault(h => h.Id == id);
+            if (book == null) return;
+            await _repo.Delete(book);
         }
 
         public async Task<IEnumerable<Book>> GetAll()
