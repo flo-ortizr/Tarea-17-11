@@ -11,5 +11,12 @@
             public string TokenType { get; set; } = "Bearer";
             public int ExpiresIn { get; set; } //sec
         }
+
+        public class UserDto
+        {
+            public Guid Id { get; set; }
+            public required string Username { get; set; }
+            public required string Email { get; set; }
+        }
     }
 }
