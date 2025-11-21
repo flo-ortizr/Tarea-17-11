@@ -32,5 +32,8 @@ namespace Tarea_17_11.Repositories
             _db.Users.Update(user);
             await _db.SaveChangesAsync();
         }
+
+        public Task<User?> GetByRefreshToken(string refreshToken) =>
+            _db.Users.FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
     }
 }

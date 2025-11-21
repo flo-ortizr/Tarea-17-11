@@ -5,6 +5,7 @@ namespace Tarea_17_11.Repositories
     public interface IUserRepository
     {
         Task<User?> GetById(Guid id);
+        Task<User?> GetByRefreshToken(string refreshToken);
         Task<User?> GetByEmailAddress(string email);
         Task AddAsync(User user);
         Task UpdateAsync(User user);
